@@ -6,7 +6,15 @@ import { useNotificationProvider } from "@refinedev/antd";
 import "@refinedev/antd/dist/reset.css";
 
 import { authProvider, dataProvider, liveProvider } from "./providers";
-import { ForgotPassword, Home, Login, Register } from "./pages";
+import {
+  CompanyCreate,
+  CompanyList,
+  CompanyEdit,
+  ForgotPassword,
+  Home,
+  Login,
+  Register,
+} from "./pages";
 
 import routerBindings, {
   CatchAllNavigate,
@@ -58,6 +66,11 @@ function App() {
                   }
                 >
                   <Route index element={<Home />} />
+                  <Route path="/companies">
+                    <Route index element={<CompanyList />} />
+                    <Route path="new" element={<CompanyCreate />} />
+                    <Route path="edit/:id" element={<CompanyEdit />} />
+                  </Route>
                 </Route>
               </Routes>
 
