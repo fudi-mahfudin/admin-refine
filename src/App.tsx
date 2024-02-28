@@ -14,12 +14,14 @@ import {
   Home,
   Login,
   Register,
+  TasksList,
+  TasksCreate,
+  TasksEdit,
 } from "./pages";
 
 import routerBindings, {
   CatchAllNavigate,
   DocumentTitleHandler,
-  NavigateToResource,
   UnsavedChangesNotifier,
 } from "@refinedev/react-router-v6";
 import { App as AntdApp } from "antd";
@@ -70,6 +72,17 @@ function App() {
                     <Route index element={<CompanyList />} />
                     <Route path="new" element={<CompanyCreate />} />
                     <Route path="edit/:id" element={<CompanyEdit />} />
+                  </Route>
+                  <Route
+                    path="/tasks"
+                    element={
+                      <TasksList>
+                        <Outlet />
+                      </TasksList>
+                    }
+                  >
+                    <Route path="new" element={<TasksCreate />} />
+                    <Route path="edit/:id" element={<TasksEdit />} />
                   </Route>
                 </Route>
               </Routes>
