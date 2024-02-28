@@ -5,7 +5,7 @@ type Props = AvatarProps & {
   name?: string;
 };
 
-const CustomAvatar = ({ name, style, ...rest }: Props) => {
+export const CustomAvatar = ({ name, style, ...rest }: Props) => {
   return (
     <AntAvatar
       alt={name}
@@ -23,5 +23,3 @@ const CustomAvatar = ({ name, style, ...rest }: Props) => {
     </AntAvatar>
   );
 };
-
-export default CustomAvatar;

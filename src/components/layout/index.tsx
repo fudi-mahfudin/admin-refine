@@ -1,7 +1,7 @@
 import { ThemedLayoutV2, ThemedTitleV2 } from "@refinedev/antd";
-import Header from "./header";
+import { Header } from "./header";
 
-const Layout = ({ children }: React.PropsWithChildren) => {
+export const Layout = ({ children }: React.PropsWithChildren) => {
   return (
     <ThemedLayoutV2
       Header={Header}
@@ -11,5 +11,3 @@ const Layout = ({ children }: React.PropsWithChildren) => {
     </ThemedLayoutV2>
   );
 };
-
-export default Layout;

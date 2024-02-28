@@ -9,12 +9,12 @@ import { getNameInitials } from "@/utilities";
 import { UPDATE_USER_MUTATION } from "@/graphql/mutations";
 
 import { Text } from "../text";
-import CustomAvatar from "../custom-avatar";
 
 import {
   UpdateUserMutation,
   UpdateUserMutationVariables,
 } from "@/graphql/types";
+import { CustomAvatar } from "../custom-avatar";
 
 type Props = {
   opened: boolean;
@@ -22,7 +22,7 @@ type Props = {
   userId: string;
 };
 
-const AccountSettings = ({ opened, setOpened, userId }: Props) => {
+export const AccountSettings = ({ opened, setOpened, userId }: Props) => {
   /**
    * useForm in Refine is used to manage forms. It provides us with a lot of useful props and methods that we can use to manage forms.
    * https://refine.dev/docs/data/hooks/use-form/#usage
@@ -170,5 +170,3 @@ const AccountSettings = ({ opened, setOpened, userId }: Props) => {
     </Drawer>
   );
 };
-
-export default AccountSettings;

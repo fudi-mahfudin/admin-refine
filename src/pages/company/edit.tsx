@@ -1,8 +1,6 @@
 import { Col, Form, Input, InputNumber, Row, Select } from "antd";
 import { Edit, useForm, useSelect } from "@refinedev/antd";
 import { GetFieldsFromList } from "@refinedev/nestjs-query";
-import CustomAvatar from "@/components/custom-avatar";
-import SelectOptionWithAvatar from "@/components/select-option-with-avatar";
 import {
   businessTypeOptions,
   companySizeOptions,
@@ -13,6 +11,8 @@ import { USERS_SELECT_QUERY } from "@/graphql/queries";
 import { UsersSelectQuery } from "@/graphql/types";
 import { getNameInitials } from "@/utilities";
 import { CompanyContactsTable } from "./contacts-table";
+import { CustomAvatar } from "@/components/custom-avatar";
+import { SelectOptionWithAvatar } from "@/components/select-option-with-avatar";
 
 export const CompanyEdit = () => {
   const { saveButtonProps, formProps, formLoading, queryResult } = useForm({

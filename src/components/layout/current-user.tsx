@@ -1,14 +1,14 @@
 import { useGetIdentity } from "@refinedev/core";
 import { Popover, Button } from "antd";
-import CustomAvatar from "../custom-avatar";
 
 import type { User } from "@/graphql/schema.types";
 import { Text } from "../text";
 import { SettingOutlined } from "@ant-design/icons";
 import { useState } from "react";
-import AccountSettings from "./account-settings";
+import { CustomAvatar } from "../custom-avatar";
+import { AccountSettings } from "./account-settings";
 
-const CurrentUser = () => {
+export const CurrentUser = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const { data: user } = useGetIdentity<User>();
 
@@ -71,5 +71,3 @@ const CurrentUser = () => {
     </>
   );
 };
-
-export default CurrentUser;

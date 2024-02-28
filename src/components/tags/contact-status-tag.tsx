@@ -11,7 +11,8 @@ import { ContactStatus } from "@/graphql/schema.types";
 type Props = {
   status: ContactStatus;
 };
-const ContactStatusTag = ({ status }: Props) => {
+
+export const ContactStatusTag = ({ status }: Props) => {
   let icon: React.ReactNode = null;
   let color: TagProps["color"] = undefined;
 
@@ -54,5 +55,3 @@ const ContactStatusTag = ({ status }: Props) => {
     </Tag>
   );
 };
-
-export default ContactStatusTag;

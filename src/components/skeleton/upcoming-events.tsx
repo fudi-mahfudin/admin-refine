@@ -1,6 +1,6 @@
 import { Badge, List, Skeleton } from "antd";
 
-const UpcomingEventsSkeleton = () => {
+export const UpcomingEventsSkeleton = () => {
   return (
     <List.Item>
       <List.Item.Meta
@@ -16,5 +16,3 @@ const UpcomingEventsSkeleton = () => {
     </List.Item>
   );
 };
-
-export default UpcomingEventsSkeleton;

@@ -3,14 +3,14 @@ import { Card, List, Space } from "antd";
 import { UnorderedListOutlined } from "@ant-design/icons";
 import dayjs from "dayjs";
 import { Text } from "../text";
-import LatestActivitiesSkeleton from "../skeleton/latest-activities";
 import {
   DASHBOARD_LATEST_ACTIVITIES_AUDITS_QUERY,
   DASHBOARD_LATEST_ACTIVITIES_DEALS_QUERY,
 } from "@/graphql/queries";
-import CustomAvatar from "../custom-avatar";
+import { LatestActivitiesSkeleton } from "../skeleton/latest-activities";
+import { CustomAvatar } from "../custom-avatar";
 
-const DashboardLatestActivities = () => {
+export const DashboardLatestActivities = () => {
   const {
     data: audit,
     isLoading: isLoadingAudit,
@@ -97,5 +97,3 @@ const DashboardLatestActivities = () => {
     </Card>
   );
 };
-
-export default DashboardLatestActivities;

@@ -7,7 +7,7 @@ import { UpcomingEventsSkeleton } from "@/components";
 import { getDate } from "@/utilities/helpers";
 import { DASHBORAD_CALENDAR_UPCOMING_EVENTS_QUERY } from "@/graphql/queries";
 
-const UpcomingEvents = () => {
+export const UpcomingEvents = () => {
   const { data, isLoading } = useList({
     resource: "events",
     pagination: { pageSize: 5 },
@@ -82,5 +82,3 @@ const UpcomingEvents = () => {
     </Card>
   );
 };
-
-export default UpcomingEvents;

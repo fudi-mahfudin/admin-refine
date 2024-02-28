@@ -1,6 +1,6 @@
 import { List, Skeleton } from "antd";
 
-const LatestActivitiesSkeleton = () => {
+export const LatestActivitiesSkeleton = () => {
   return (
     <List.Item>
       <List.Item.Meta
@@ -20,5 +20,3 @@ const LatestActivitiesSkeleton = () => {
     </List.Item>
   );
 };
-
-export default LatestActivitiesSkeleton;

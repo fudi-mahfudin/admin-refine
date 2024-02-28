@@ -9,7 +9,7 @@ type Props = {
   totalCount?: number;
 };
 
-const DashboardTotalCountCard = ({
+export const DashboardTotalCountCard = ({
   resource,
   isLoading,
   totalCount,
@@ -83,5 +83,3 @@ const DashboardTotalCountCard = ({
     </Card>
   );
 };
-
-export default DashboardTotalCountCard;

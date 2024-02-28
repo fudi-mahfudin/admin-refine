@@ -10,11 +10,11 @@ import {
   List,
   useTable,
 } from "@refinedev/antd";
-import CustomAvatar from "@/components/custom-avatar";
 import { Text } from "@/components/text";
 import { COMPANIES_LIST_QUERY } from "@/graphql/queries";
 import { Company } from "@/graphql/schema.types";
 import { currencyNumber } from "@/utilities/currency-number";
+import { CustomAvatar } from "@/components/custom-avatar";
 
 export const CompanyList = ({ children }: React.PropsWithChildren) => {
   const go = useGo();

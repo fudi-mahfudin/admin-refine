@@ -9,7 +9,7 @@ import { DASHBOARD_DEALS_CHART_QUERY } from "@/graphql/queries";
 import { mapDealsData } from "@/utilities/helpers";
 import { DashboardDealsChartQuery } from "@/graphql/types";
 
-const DealsChart = () => {
+export const DealsChart = () => {
   const { data } = useList<GetFieldsFromList<DashboardDealsChartQuery>>({
     resource: "dealStages",
     filters: [{ field: "title", operator: "in", value: ["WON", "LOST"] }],
@@ -69,5 +69,3 @@ const DealsChart = () => {
     </Card>
   );
 };
-
-export default DealsChart;

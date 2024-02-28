@@ -9,12 +9,12 @@ import {
 } from "@ant-design/icons";
 import { useParams } from "react-router-dom";
 import { ContactStatusTag } from "@/components";
-import CustomAvatar from "@/components/custom-avatar";
 import { Text } from "@/components/text";
 import { statusOptions } from "@/constants";
 import { COMPANY_CONTACTS_TABLE_QUERY } from "@/graphql/queries";
 import { Contact } from "@/graphql/schema.types";
 import { CompanyContactsTableQuery } from "@/graphql/types";
+import { CustomAvatar } from "@/components/custom-avatar";
 
 export const CompanyContactsTable = () => {
   // get params from the url

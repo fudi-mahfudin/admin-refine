@@ -18,11 +18,11 @@ import {
 } from "antd";
 import dayjs from "dayjs";
 import React, { memo } from "react";
-import CustomAvatar from "@/components/custom-avatar";
 import { Text } from "@/components/text";
 import { TextIcon } from "@/components/text-icon";
 import { User } from "@/graphql/schema.types";
 import { getDateColor } from "@/utilities/get-date-color";
+import { CustomAvatar } from "@/components/custom-avatar";
 
 type Props = {
   id: string;

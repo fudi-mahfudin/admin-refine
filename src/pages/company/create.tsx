@@ -5,8 +5,8 @@ import { GetFieldsFromList } from "@refinedev/nestjs-query";
 import { CompanyList } from "./list";
 import { CREATE_COMPANY_MUTATION } from "@/graphql/mutations";
 import { USERS_SELECT_QUERY } from "@/graphql/queries";
-import SelectOptionWithAvatar from "@/components/select-option-with-avatar";
 import { UsersSelectQuery } from "@/graphql/types";
+import { SelectOptionWithAvatar } from "@/components/select-option-with-avatar";
 
 export const CompanyCreate = () => {
   const go = useGo();
