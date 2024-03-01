@@ -26,3 +26,4 @@ export * from "./tasks/form/due-date";
 export * from "./tasks/form/users";
 
 export * from "./accordion";
+export * from "./icons/logo-me";

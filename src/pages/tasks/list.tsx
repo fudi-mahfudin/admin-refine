@@ -1,6 +1,7 @@
 import React from "react";
 import { useList, useNavigation, useUpdate } from "@refinedev/core";
 import { GetFieldsFromList } from "@refinedev/nestjs-query";
+import { TaskStagesQuery, TasksQuery } from "@/graphql/types";
 import { DragEndEvent } from "@dnd-kit/core";
 import {
   KanbanAddCardButton,
@@ -13,9 +14,10 @@ import {
   ProjectCardSkeleton,
 } from "@/components";
 import { TASKS_QUERY, TASK_STAGES_QUERY } from "@/graphql/queries";
-import { Task, TaskStage } from "@/graphql/schema.types";
-import { TasksQuery } from "@/graphql/types";
 import { UPDATE_TASK_STAGE_MUTATION } from "@/graphql/mutations";
+
+type Task = GetFieldsFromList<TasksQuery>;
+type TaskStage = GetFieldsFromList<TaskStagesQuery> & { tasks: Task[] };
 
 export const TasksList = ({ children }: React.PropsWithChildren) => {
   const { replace } = useNavigation();

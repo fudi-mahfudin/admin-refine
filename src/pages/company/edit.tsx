@@ -68,21 +68,24 @@ export const CompanyEdit = () => {
                   }
                 />
               </Form.Item>
-              <Form.Item>
+              <Form.Item label="Company size" name="companySize">
                 <Select options={companySizeOptions} />
               </Form.Item>
-              <Form.Item>
+              <Form.Item label="Total revenue" name="totalRevenue">
                 <InputNumber
                   autoFocus
                   addonBefore="Rp"
                   min={0}
                   placeholder="0"
+                  formatter={(value) =>
+                    `${value}`.replace(/\B(?=(\d{3})+(?!\d))/g, ".")
+                  }
                 />
               </Form.Item>
-              <Form.Item label="Industry">
+              <Form.Item label="Industry" name="industry">
                 <Select options={industryOptions} />
               </Form.Item>
-              <Form.Item label="Business type">
+              <Form.Item label="Business type" name="businessType">
                 <Select options={businessTypeOptions} />
               </Form.Item>
               <Form.Item label="Country" name="country">
